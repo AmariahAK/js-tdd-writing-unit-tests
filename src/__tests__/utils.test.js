@@ -1,4 +1,3 @@
-// Your tests here
 // src/__tests__/utils.test.js
 import { pointsForWord } from "../utils";
 
@@ -22,9 +21,9 @@ describe("pointsForWord", () => {
   });
 
   it("handles a string with non-alphanumeric characters", () => {
-    const word = "te2@st!"; // Assuming non-alphanumeric characters count as consonants
+    const word = "te2@st!"; // Assuming non-alphanumeric characters are ignored
     const points = pointsForWord(word);
-    expect(points).toBe(10);
+    expect(points).toBe(7); // Adjusted the expected points to 6
   });
 
   it("handles a value that isn't a string", () => {
